@@ -32,7 +32,7 @@ Options:
   --root-pattern, --rp                 The root pattern of the redis keys.      [string]  [default: "*"]
   --nosave, --ns                       Do not save new connections to config.   [boolean] [default: true]
   --noload, --nl                       Do not load connections from config.     [boolean] [default: false]
-  --use-scan, --sc                     Use scan instead of keys.                [boolean] [default: false]
+  --use-scan, --sc                     Use scan instead of keys.                [boolean] [default: true]
   --clear-config, --cc                 clear configuration file.                [boolean] [default: false]
   --scan-count, --sc                   The size of each seperate scan.          [integer] [default: 100]
   --no-log-data                        Do not log data values from redis store. [boolean] [default: false]

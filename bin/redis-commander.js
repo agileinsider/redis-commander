@@ -108,7 +108,7 @@ let args = optimist
   .options('use-scan', {
       alias: 'sc',
       boolean: true,
-      default: false,
+      default: true,
       describe: 'Use SCAN instead of KEYS.'
   })
   .options('scan-count', {
