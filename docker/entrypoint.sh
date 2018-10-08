@@ -170,6 +170,10 @@ if [[ ! -z "$SENTINEL_HOST" ]]; then
     set -- "$@" "--sentinel-host $SENTINEL_HOST"
 fi
 
+if [[ ! -z "$SENTINEL_MASTER_NAME" ]]; then
+    set -- "$@" "--sentinel-master-name $SENTINEL_MASTER_NAME"
+fi
+
 if [[ ! -z "$HTTP_USER" ]]; then
     set -- "$@" "--http-u $HTTP_USER"
 fi

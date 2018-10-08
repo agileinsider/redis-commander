@@ -22,6 +22,7 @@ Options:
   --redis-label                        The label to display for the connection. [string]
   --sentinel-port                      The port to find redis sentinel on.      [string]
   --sentinel-host                      The host to find redis sentinel on.      [string]
+  --sentinel-master-name               The host to find redis sentinel on.      [string]  [default: "mymaster"]
   --http-auth-username, --http-u       The http authorisation username.         [string]
   --http-auth-password, --http-p       The http authorisation password.         [string]
   --http-auth-password-hash, --http-h  The http authorisation password hash.    [string]
@@ -54,6 +55,7 @@ REDIS_DB
 REDIS_HOSTS
 SENTINEL_PORT
 SENTINEL_HOST
+SENTINEL_MASTER_NAME
 HTTP_USER
 HTTP_PASSWORD
 HTTP_PASSWORD_HASH

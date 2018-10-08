@@ -28,6 +28,11 @@ let args = optimist
     string: true,
     describe: 'The host to find sentinel on.'
   })
+  .options('sentinel-master-name', {
+    string: true,
+    describe: 'The host to find sentinel on.',
+    default: 'mymaster'
+  })
   .options('redis-socket', {
     string: true,
     describe: 'The unix-socket to find redis on.'
@@ -204,6 +209,7 @@ myUtils.getConfig(function (err, config) {
         "host": args['redis-host'] || "localhost",
         "sentinel_host": args['sentinel-host'],
         "sentinel_port": args['sentinel-port'],
+        "sentinal_master_name": args['sentinel-master-name'] || 'mymaster',
         "port": args['redis-port'] || args['redis-socket'] || "6379",
         "dbIndex": db,
         "password": args['redis-password'] || '',
@@ -216,7 +222,7 @@ myUtils.getConfig(function (err, config) {
             showFriendlyErrorStack: true,
             sentinels: [{host: newDefault.sentinel_host, port: newDefault.sentinel_port}],
             password: newDefault.password,
-            name: 'mymaster',
+            name: newDefault.sentinal_master_name,
             connectionName: newDefault.connectionName
           });
         } else {
